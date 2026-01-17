@@ -1,10 +1,21 @@
 /* Hero Section */
-.hero.section {
-  padding: 80px 0 60px 0;
+.hero {
+  width: 100%;
+  position: relative;
+  padding: 120px 0 0 0;
 }
 
-.hero.light-background {
-  background-color: #F0FDF4;
+section, .section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 90px;
+  overflow: clip;
+}
+
+.light-background {
+  --background-color: #f1f6f1;
+  --surface-color: #ffffff;
 }
 
 /* Container */
@@ -165,7 +176,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin: 0;
 }
 
 .icon-boxes .row > [class*="col-"] {
@@ -174,7 +184,7 @@
   padding: 0;
 }
 
-.icon-box {
+.hero .icon-box {
   background: var(--surface-color);
   padding: 60px 30px;
   position: relative;
@@ -191,33 +201,61 @@
 .icon-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-color);
 }
 
-.icon-box .icon {
+.bi-gem::before {
+  content: "\f3e6";
+}
+
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero .icon-box .icon {
   margin-bottom: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--accent-color);
 }
 
 .icon-box .icon i {
   font-size: 40px;
   color: #5CB85C;
   line-height: 1;
-}
-
-.icon-box .title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.icon-box .title a {
-  color: #2C3E50;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
+.hero .icon-box .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.hero .icon-box .title a {
+  font-family: "Raleway", sans-serif;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  transition: 0.3s;
+}
+
 .icon-box:hover .title a {
-  color: #5CB85C;
+  color: #FFFFFF;
+}
+
+.icon-box:hover .icon i {
+  color: #FFFFFF;
 }
 
 /* Responsive - Large screens (1200px+) */

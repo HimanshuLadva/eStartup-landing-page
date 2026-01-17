@@ -9,6 +9,8 @@
 
 :root {
   --surface-color: #FFFFFF;
+  --accent-color: #5CB85C;
+  --default-color: #212529;
   font-family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
